@@ -1,0 +1,67 @@
+body{
+    position: relative;
+}
+.banner{
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+}
+.main{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+input{
+    width: 90%;
+    height: 35px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border: 1px solid rgb(202, 201, 201);
+}
+.main div:last-child input{
+    width: 97%;
+    background-color: rgb(235, 235, 98);
+    font-size: 22px;
+    color: white;
+    height: 40px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+.main div:last-child input:hover{
+    background-color: #FBD319;
+    color: white;
+}
+input:focus{ outline:none; }
+.main div{
+    padding-bottom: 30px;
+}
+textarea{
+    width: 97%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+.footer-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+@media screen and (max-width:992px) {
+    textarea,.main div:last-child input{
+        width: 90%;
+    }
+}
