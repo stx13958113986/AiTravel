@@ -7,8 +7,8 @@
   box-sizing: border-box;
 }
 
-ol,
-ul{
+
+.wrapper ul{
   list-style: none;
   margin: 0;
   padding: 0;
@@ -36,16 +36,15 @@ hr{
   background: var(--main-bg-color);
   color: #fff;
 }
-
-.container{
+.sortable>.container{
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
   padding: 0 10px;
-}
+} 
 .wrapper{
   padding: 40px 0;
-}
+} 
 .card{
   background: #fff;
   border-radius: 6px;
