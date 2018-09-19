@@ -5,8 +5,8 @@
 }
 
 body {
-    background: #fff;
     font: normal 12px/22px "Microsoft Yahei";
+    position: relative;
 }
 
 img {
@@ -169,62 +169,101 @@ a:hover {
 .banner-area li.active {
     background: url("../images/about_us/pagination_01.png") no-repeat
 }
-.main{
-    
-    height: 1000px;
+
+.main {
     width: 65%;
     text-align: center;
     margin: 0 auto;
-
 }
-.big-main{
-    padding-top: 50px;
-    width: 100%;
-    background-repeat: no-repeat;
+
+body,
+html {
     background-size: cover;
     background-position: center;
     background: #89abe1;
     background: -webkit-linear-gradient(bottom, #afbdd3, #a6d5e2);
     opacity: 0.9;
 }
-.main>p{
+
+.big-main {
+    padding-top: 50px;
+    width: 100%;
+    padding-bottom: 50px;
+    background: -webkit-linear-gradient(bottom, #aec0df, #97ccdb);
+    opacity: 0.9;
+}
+
+.main>p {
     font-size: 34px;
 }
-.work-intro{
+
+.work-intro {
     padding-top: 20px;
 }
+
 .title-text span {
-    display: block;     
-    position: relative;  
-    text-align: center; 
+    display: block;
+    position: relative;
+    text-align: center;
     font-size: 20px;
-} 
-
-.title-text span:before, .title-text span:after { 
-    content: ''; 
-    position: absolute;   
-    top: 50%; 
-    background: #8c8c8c;   
-    width: 42%;        
-    height: 1px; 
-} 
-
-.title-text span:before { 
-    left: 2%;       
-} 
-
-.title-text span:after { 
-    right: 2%; 
 }
-.work-main{
-    margin:0 auto; 
+
+.title-text span:before,
+.title-text span:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    background: #8c8c8c;
+    width: 38%;
+    height: 1px;
+}
+
+.title-text span:before {
+    left: 2%;
+}
+
+.title-text span:after {
+    right: 2%;
+}
+
+.work-main {
+    margin: 0 auto;
     width: 90%;
     padding-top: 40px;
     text-align: justify;
     font-size: 16px;
     text-indent: 40px;
-   
 }
-.work-main>p{
+
+.work-main>p {
     padding-top: 20px;
+}
+
+.contact {
+    padding-top: 100px;
+}
+.footer-item {
+    width: 100%;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.footer-right-item>div>p {
+    line-height: 49px;
+}
+
+.r1 {
+    width: 33px;
+    height: 45px;
+}
+
+.r2 {
+    width: 35px;
+    height: 35px;
+}
+
+.footer-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
