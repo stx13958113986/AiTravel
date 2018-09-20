@@ -180,9 +180,6 @@ body,
 html {
     background-size: cover;
     background-position: center;
-    background: #89abe1;
-    background: -webkit-linear-gradient(bottom, #afbdd3, #a6d5e2);
-    opacity: 0.9;
 }
 
 .big-main {
@@ -190,6 +187,9 @@ html {
     width: 100%;
     padding-bottom: 50px;
     background: -webkit-linear-gradient(bottom, #aec0df, #97ccdb);
+    background: -o-linear-gradient(left, #aec0df, #97ccdb);
+    background: -moz-linear-gradient(left, #aec0df, #97ccdb);
+    background: linear-gradient(left, #aec0df, #97ccdb);
     opacity: 0.9;
 }
 

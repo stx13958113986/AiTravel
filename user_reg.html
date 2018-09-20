@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>用户登录界面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/user_reg.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="container-login" style="background-image: url('images/user_reg/1.jpg');">
+        <div class="wrap-login">
+            <div class="login-form">
+                    <span class="login-form-title">欢迎注册</span>
+               <div class="wrap-input validate-input" data-validate="请输入用户名">
+                    <input class="input" type="text" name="username" placeholder="您的新用户名" autocomplete="off">
+                    <span class="focus-input"></span>
+                    <span class="symbol-input">
+                        <i class="fa fa-user"></i>
+                    </span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="请输入您的真实姓名">
+                        <input class="input" type="text" name="username" placeholder="请输入您的真实姓名" autocomplete="off">
+                        <span class="focus-input"></span>
+                        <span class="symbol-input">
+                            <i class="fa fa-user"></i>
+                        </span>
+                    </div>
+                <div class="wrap-input validate-input" data-validate="请输入密码">
+                    <input class="input" type="password" name="pass" placeholder="请输入密码">
+                    <span class="focus-input"></span>
+                    <span class="symbol-input">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                </div>
+                <div class="wrap-input validate-input" data-validate="请输入密码">
+                        <input class="input" type="password" name="pass" placeholder="重复密码">
+                        <span class="focus-input"></span>
+                        <span class="symbol-input">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+
+                <div class="container-login-form-btn">
+                  <button class="login-form-btn">注册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(".login-form-btn").click(function(){
+    window.location.href = "index.html";
+})
+</script>
+</body>
+</html>

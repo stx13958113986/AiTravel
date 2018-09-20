@@ -1,0 +1,74 @@
+.top{
+   position: relative;
+   width: 100%;
+}
+.top img{
+    width: 100%;
+}
+.big-main{
+    margin-top: 100px;
+    border-top: solid 1px rgb(179, 176, 170);
+    width: 100%;
+}
+.main{
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+.position{
+    font-size: 14px;
+    padding-top: 30px;
+}
+.position a:hover{
+    color: blue !important;
+}
+.main>div>img{
+    width: 80%;
+    height: 640px;
+}
+.main>div ul{
+    width: 20%;
+    height: 640px;
+    list-style: none;
+    overflow: hidden;
+    position: absolute;
+    top: 60px;
+    left: 83%;
+  
+}
+.main>div ul li{
+height: 170px;
+}
+.right{
+    width: 90%;
+    margin-left: 10%;
+    margin-top: 60px;
+    position: relative;
+}
+.right>p:first-child{
+    font-size: 26px;
+    width: 90%;
+    color: black;
+}
+.right>img{
+width: 5%;
+position: absolute;
+right: 2%;
+top:3%; 
+cursor: pointer;
+}
+.right>p:nth-child(3){
+    padding-top: 20px;
+    color: #B5B5B5;
+    text-align: justify;
+}
+.right>p:nth-child(4){
+    padding-top: 20px;
+    font-size: 16px;
+}
+.right>p:nth-child(4)>span:first-child{
+    font-size: 24px;
+    color: red;
+    font-weight: bold;
+    padding:10px;
+}
