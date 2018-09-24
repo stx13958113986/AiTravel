@@ -67,4 +67,7 @@ textarea{
     .main div:last-child input{
         font-size: 14px;
     }
+    .child{
+        width: 100%;
+    }
 }
