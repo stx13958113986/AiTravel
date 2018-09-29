@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>用户登录界面</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/user_reg.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="container-login" style="background-image: url('images/user_reg/1.jpg');">
+        <form id="form-register" action="/users/go" method="post">
+        <div class="wrap-login">
+            <div class="login-form">
+                    <span class="login-form-title">欢迎注册</span>
+                <span class="check"></span>
+               <div class="wrap-input validate-input" data-validate="请输入用户名">
+                    <input class="input" type="text" name="uname" id="uname" placeholder="您的新用户名" autocomplete="off" onblur="check()">  
+                    <span class="focus-input"></span>
+                    <span class="symbol-input">
+                        <i class="fa fa-user"></i>
+                    </span>
+                  
+                </div>
+                <div class="wrap-input validate-input" data-validate="请输入密码">
+                    <input class="input" type="password" name="upwd" id="upwd" placeholder="请输入密码">
+                    <span class="focus-input"></span>
+                    <span class="symbol-input">
+                        <i class="fa fa-lock"></i>
+                    </span>
+                </div>
+                <span class="check_pwd"></span>
+                <div class="wrap-input validate-input" data-validate="请输入密码">
+                        <input class="input" type="password" name="upwdconfirm" id="upwdconfirm" placeholder="重复密码" onblur="check2()">
+                        <span class="focus-input"></span>
+                        <span class="symbol-input">
+                            <i class="fa fa-lock"></i>
+                        </span>
+                    </div>
+
+                <div class="container-login-form-btn">
+                  <input type="button" class="login-form-btn" id="reg" value="注册">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+<script src="./js/user_reg.js"></script>
+</body>
+</html>
