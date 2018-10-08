@@ -25,7 +25,7 @@ app.use(session({
     // cookie: { secure: true }
 }))
 //托管静态资源到public目录下
-app.use(express.static('public'));
+app.use(express.static(__dirname+'/public'));
 /*使用路由器来管理路由*/
 app.use("/index",index);
 app.use("/details",details);

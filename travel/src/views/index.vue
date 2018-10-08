@@ -1,0 +1,283 @@
+<template>
+<div>
+  <tr-header></tr-header>
+ <div class="banner">
+        <img src="images/index/banner1.jpg" alt="" class="img_0">
+        <section class="cd-intro size">
+            <h1 class="cd-headline letters rotate-3">
+                <span></span>
+                <span class="cd-words-wrapper">
+                    <b class="is-visible"></b>
+                    <b class="size_head">AI-Travel,订制旅行旗舰品牌</b>
+                    <b class="size_head_2">敢爱敢游,你的旅途你说了算</b>
+                </span>
+            </h1>
+        </section>
+    </div>
+    <div class="main_1 bi_1">
+        <img src="images/index/5.jpg" class="img_1">
+        <div class="t t_1 action_1">
+            <p>与谁同行</p>
+            <p>不跟团·超省心·有保障</p>
+            <p>跟团?不自由;</p>
+            <p>自由行?太麻烦;</p>
+            <p>有没有一种省心、自由、又不贵的出国旅行方式？</p>
+            <p>这正是我们能为你做的。</p>
+            <p class="p-btn">
+                <a href="selection.html" class="a-btn">了解更多</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="main_1 bi_2">
+        <img src="images/index/3.jpg" class="img_1">
+        <div class="t t_2 action_2">
+            <p>您只需决定出发,剩下的交给我们</p>
+            <p>去非洲大草原看动物大迁徙，寻觅非洲五霸</p>
+            <p>去意大利卡布里岛的蓝洞划船</p>
+            <p>去土耳其卡帕多西亚乘坐热气球迎接日出</p>
+            <p>去墨西哥的梦幻洞穴里潜水</p>
+            <p>去玻利维亚的天空之境拍摄唯美大片</p>
+            <p>去北欧住进浪漫的玻璃屋酒店，躺在床在看梦幻的北极光</p>
+            <p class="p-btn_2">
+                <a href="private.html" class="a-btn">马上出发</a>
+            </p>
+        </div>
+    </div>
+    <div class="main_1 bi_3">
+        <img src="images/index/2.jpg" class="img_1">
+        <div class="t t_1 action_3">
+            <p>酒店</p>
+            <p>路上的另一个家</p>
+            <p>酒店不仅是住宿，也是我们旅途中的家，更是我们欣赏世界的一扇窗。</p>
+            <p>豪华，不是对酒店追求的唯一标准</p>
+            <p>我们精选每一家酒店</p>
+            <p>让您住的舒适的同时</p>
+            <p>受异国的艺术文化、风土人情</p>
+            <p>因此您的住宿可能是森林里的树上木屋</p>
+            <p>悬崖峭壁上有着无边游泳池的特色酒店</p>
+            <p>北极圈内极光闪耀下的玻璃小屋</p>
+        </div>
+    </div>
+    <div class="main_1 bi_4">
+        <img src="images/index/1.jpg" class="img_1">
+        <div class="t t_2 t_4 action_4">
+            <p>美食</p>
+            <p>岂能将就</p>
+            <p>我们不辜负一个悠长的假期</p>
+            <p>不辜负一个阳光灿烂的午后</p>
+            <p>更不能辜负远方的精致美食</p>
+            <p>我们为您精选不可错过的地道美食</p>
+            <p>跟着我们，来一次舌尖上的盛宴</p>
+        </div>
+    </div>
+
+    <div class="txt-box">
+        <h1>看看我们推荐的<span>旅游景点</span></h1>
+        <p>感谢有你们，每一次的认可和满意是我们前行的最大动力</p>
+    </div>
+    <main class="sortable">
+        <div class="container">
+            <div class="wrapper">
+                <ul class="sortable__nav nav">
+                    <li>
+                        <a data-sjslink="all" class="nav__link">
+                            全部风景
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="Forest" class="nav__link">
+                            原始森林
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="sea" class="nav__link">
+                            汪洋大海
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="city" class="nav__link">
+                            繁华都市
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="Grassland" class="nav__link">
+                            青青草原
+                        </a>
+                    </li>
+                    <li>
+                        <a data-sjslink="river" class="nav__link">
+                            山川大河
+                        </a>
+                    </li>
+                </ul>
+                <div id="sortable" class="sjs-default">
+                    <div data-sjsel="Forest" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/a.jpg" alt="">
+                            <span class="pic-caption open-left">
+                                <h1 class="pic-title">贺兰山</h1>
+                                <p>山势雄伟，若群马奔腾。蒙古语称骏马为“贺兰”，故名贺兰山</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="Forest" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/b.jpg" alt="">
+                            <span class="pic-caption open-right">
+                                <h1 class="pic-title">四明山森林公园</h1>
+                                <p>一到山上，心旷神怡，妙不可言，向称避暑胜地</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="Forest" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/c.jpg" alt="">
+                            <span class="pic-caption open-right">
+                                <h1 class="pic-title">九连山原始森林度假村</h1>
+                                <p>无山不绿，有水皆清，四季飘香，万壑鸟鸣</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="Forest" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/d.jpg" alt="">
+                            <span class="pic-caption open-right">
+                                <h1 class="pic-title">横头山国家公园</h1>
+                                <p>山国家级公园，省级地质公园</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="sea" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/e.jpg" alt="">
+                            <span class="pic-caption open-left">
+                                <h1 class="pic-title">巴厘岛</h1>
+                                <p>2015年由美国著名旅游杂志《旅游+休闲》一项调查结果把印尼巴厘岛评为世界上最佳的岛屿之一</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="sea" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/f.jpg" alt="">
+                            <span class="pic-caption open-left">
+                                <h1 class="pic-title">毛里求斯</h1>
+                                <p>毛里求斯曾是世上唯一住有渡渡鸟的地方，但该鸟已于17世纪末绝种。截至2013年，毛里求斯是非洲三个人类发展指数被评为“高”级别的国家之一。</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="city" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/g.jpg" alt="">
+                            <span class="pic-caption open-right">
+                                <h1 class="pic-title">洛杉矶</h1>
+                                <p>洛杉矶是美国重要的工商业、国际贸易、科教、娱乐和体育中心之一，也是美国石油化工、海洋、航天工业和电子业的主要基地之一</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="Grassland" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/h.jpg" alt="">
+                            <span class="pic-caption open-right">
+                                <h1 class="pic-title">内蒙古</h1>
+                                <p>高原型的地貌区；全区由于地理位置和地形的影响，形成以温带大陆性季风气候为主的复杂多样的气候。</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div data-sjsel="river" class="pic pic-3d">
+                        <div class="card">
+                            <img class="card__picture pic-image" src="images/index/i.jpg" alt="">
+                            <span class="pic-caption open-left">
+                                <h1 class="pic-title">黄山</h1>
+                                <p>世界文化与自然双重遗产，世界地质公园，国家AAAAA级旅游景区，国家级风景名胜区，全国文明风景旅游区示范点，中华十大名山，天下第一奇山</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="footer">
+        <p>你只要决定出发</p>
+        <p>剩下的所有一切,交给我们就好</p>
+        <div class="col-lg-3 col-lg-offset-3 col-sm-8 col-sm-offset-2">
+            <div class="footer-left">
+                <p><input type="text" value="" placeholder="您的姓名"></p>
+                <p><input type="text" value="" placeholder="联系方式"></p>
+                <p><input type="text" value="" placeholder="目的地"></p>
+                <p><input type="text" value="" placeholder="出行天数"></p>
+                <p><input type="submit" value="提交"></p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-lg-offset-0 col-sm-8 col-sm-offset-2">
+            <div class="footer-right">
+                <div class="footer-right-item">
+                    <div class="r1">
+                    </div>
+                    <div>
+                        <p>AI-travel</p>
+                        <p>想去哪就去哪,天下任你行</p>
+                    </div>
+                </div>
+                <div class="footer-right-item">
+                    <div class="r2">
+                    </div>
+                    <div>
+                        <p>热线电话</p>
+                        <p>400-5888-8888</p>
+                    </div>
+                </div>
+                <div class="footer-right-item">
+                    <div class="r3">
+                    </div>
+                    <div>
+                        <p>联系邮箱</p>
+                        <p>AI-travel@126.com</p>
+                    </div>
+                </div>
+                <div class="footer-right-item">
+                    <div class="r4">
+                    </div>
+                    <div>
+                        <p>5年来,已有10221个用户选择我们,好评率近100%</p>
+                        <p>我们一直致力于提高用户的旅行体验而变得更好</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <tr-footer></tr-footer>
+    </div>
+</template>
+
+<script>
+
+import TrHeader from "@/components/TrHeader.vue"
+import TrFooter from "@/components/TrFooter.vue"
+import  "../lib/js/index.js";
+import  "../lib/js/hobby.js";
+  export default{
+    data(){
+      return {  
+      }
+    },
+    components:{
+      TrHeader,
+      TrFooter
+    },
+    created(){
+        
+    },
+    methods:{
+    }
+  }
+</script>
+<style lang="css" scoped>
+@import "../lib/css/index.css";
+@import "../lib/css/main.css";
+@import "../lib/css/base.css";
+@import "../lib/css/sass-compiled.css";
+@import "../lib/css/sortable.min.css";
+@import "../lib/css/title.css";
+</style>
