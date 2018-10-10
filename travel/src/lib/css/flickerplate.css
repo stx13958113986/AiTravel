@@ -99,7 +99,7 @@
 .flickerplate .arrow-navigation.left .arrow {
     opacity: 0;
     margin: 0px 0px 0px 50%;
-    background-image: url("../images/flickerplate/arrow-left-light.png");
+    background-image: url("../../../public/images/flickerplate/arrow-left-light.png");
     background-repeat: no-repeat;
     background-position: left
 }
@@ -111,7 +111,7 @@
 .flickerplate .arrow-navigation.right .arrow {
     opacity: 0;
     margin: 0px 0px 0px -50%;
-    background-image: url("../images/flickerplate/arrow-right-light.png");
+    background-image: url("../../../public/images/flickerplate/arrow-right-light.png");
     background-repeat: no-repeat;
     background-position: right
 }
@@ -182,11 +182,11 @@
 }
 
 .flickerplate.flicker-theme-dark .arrow-navigation.left .arrow {
-    background-image: url("../images/flickerplate/arrow-left-dark.png")
+    background-image: url("../../../public/images/flickerplate/arrow-left-dark.png")
 }
 
 .flickerplate.flicker-theme-dark .arrow-navigation.right .arrow {
-    background-image: url("../images/flickerplate/arrow-right-dark.png")
+    background-image: url("../../../public/images/flickerplate/arrow-right-dark.png")
 }
 
 .flickerplate.flicker-theme-dark .dot-navigation .dot {

@@ -1,6 +1,7 @@
-function check() {
+$(function(){
+    $(".input").click(function () {
     //注册按钮的事件，用ajax提交表单
-    $.post("/users/check", {
+    $.post("http://127.0.0.1:3000/users/check", {
         "uname": $("#uname").val(),
     }, function (result) {
         if (result == "-1") {
@@ -17,11 +18,11 @@ function check() {
             $(".check").html("用户可以使用");
         }
     })
-};
+}),
 
 $("#reg").click(function () {
     //注册按钮的事件，用ajax提交表单
-    $.post("/users/check", {
+    $.post("http://127.0.0.1:3000/users/check", {
         "uname": $("#uname").val(),
         "upwd": $("#upwd").val(),
         "upwdconfirm": $("#upwdconfirm").val()
@@ -51,3 +52,4 @@ $("#reg").click(function () {
         }
     })
 });
+})

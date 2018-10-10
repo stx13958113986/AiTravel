@@ -12,10 +12,11 @@ const users=require("./routes/users");
 
 var app = express();
 app.use(cors({
-    origin:"http://localhost:8080",
+    origin:["http://127.0.0.1:3001"],
     credentials:true
-  }))
+}))
 var server = app.listen(3000);
+
 //使用body-parser中间件
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(session({

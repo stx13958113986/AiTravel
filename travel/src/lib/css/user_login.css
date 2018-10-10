@@ -173,10 +173,10 @@ iframe {
     top: 0;
     left: 0;
     background: #89abe1;
-    background: -webkit-linear-gradient(bottom, #6294e4, #00c6fb);
-    background: -o-linear-gradient(bottom, #6294e4, #00c6fb);
-    background: -moz-linear-gradient(bottom, #6294e4, #00c6fb);
-    background: linear-gradient(bottom, #6294e4, #00c6fb);
+    background: -webkit-linear-gradient(to bottom, #6294e4, #00c6fb);
+    background: -o-linear-gradient(to bottom, #6294e4, #00c6fb);
+    background: -moz-linear-gradient(to bottom, #6294e4, #00c6fb);
+    background: linear-gradient(to bottom, #6294e4, #00c6fb);
     opacity: 0.7;
   }
   .wrap-login{
@@ -312,7 +312,7 @@ iframe {
   
   /*------------------------------------------------------------------
   [ Button ]*/
-  .container-login-form-btn {
+  .container-login-form-btn-l {
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
@@ -324,7 +324,7 @@ iframe {
     padding-top: 10px;
   }
   
-  .login-form-btn {
+  .login-form-btn-l {
     font-family: Montserrat-Bold;
     font-size: 15px;
     line-height: 1.5;
@@ -352,7 +352,7 @@ iframe {
     z-index: 1;
   }
   
-  .login-form-btn::before {
+  .login-form-btn-l::before {
     content: "";
     display: block;
     position: absolute;
@@ -363,10 +363,10 @@ iframe {
     top: 0;
     left: 0;
     background: #005bea;
-    background: -webkit-linear-gradient(left, #005bea, #00c6fb);
-    background: -o-linear-gradient(left, #005bea, #00c6fb);
-    background: -moz-linear-gradient(left, #005bea, #00c6fb);
-    background: linear-gradient(left, #005bea, #00c6fb);
+    background: -webkit-linear-gradient(to left, #005bea, #00c6fb);
+    background: -o-linear-gradient(to left, #005bea, #00c6fb);
+    background: -moz-linear-gradient(to left, #005bea, #00c6fb);
+    background: linear-gradient(to left, #005bea, #00c6fb);
     -webkit-transition: all 0.4s;
     -o-transition: all 0.4s;
     -moz-transition: all 0.4s;
@@ -374,12 +374,12 @@ iframe {
     opacity: 0;
   }
   
-  .login-form-btn:hover {
+  .login-form-btn-l:hover {
     background: transparent;
     color: #fff;
   }
   
-  .login-form-btn:hover:before {
+  .login-form-btn-l:hover:before {
     opacity: 1;
   }
   .forget_pwd{

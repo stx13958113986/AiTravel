@@ -1,4 +1,4 @@
-
+$(function(){
 $(".detail_intr").on("click", "a", function () {
     var $a = $(this);
     if(!$a.is(".active")){
@@ -13,4 +13,5 @@ $(".detail_intr").on("click", "a", function () {
         }
            
     }
+})
 })

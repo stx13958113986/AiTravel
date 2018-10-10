@@ -256,7 +256,7 @@
 import TrHeader from "@/components/TrHeader.vue"
 import TrFooter from "@/components/TrFooter.vue"
 import  "../lib/js/index.js";
-import  "../lib/js/hobby.js";
+
   export default{
     data(){
       return {  
@@ -267,7 +267,9 @@ import  "../lib/js/hobby.js";
       TrFooter
     },
     created(){
-        
+        $(function(){
+    document.querySelector('#sortable').sortablejs();
+})
     },
     methods:{
     }

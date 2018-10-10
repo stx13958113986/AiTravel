@@ -7,10 +7,10 @@ body{
 .banner img{
     width: 100%;
 }
-.main{
+.private_main{
     width: 80%;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 150px;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -27,7 +27,7 @@ input{
     -o-border-radius: 15px;
     border: 1px solid rgb(202, 201, 201);
 }
-.main div:last-child input{
+.private_main div:last-child input{
     width: 97%;
     background-color: rgb(235, 235, 98);
     font-size: 22px;
@@ -39,12 +39,12 @@ input{
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
 }
-.main div:last-child input:hover{
+.private_main div:last-child input:hover{
     background-color: #FBD319;
     color: white;
 }
 input:focus{ outline:none; }
-.main div{
+.private_main div{
     padding-bottom: 30px;
 }
 textarea{
@@ -55,16 +55,12 @@ textarea{
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
 }
-.footer-bottom{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+
 @media screen and (max-width:992px) {
-    textarea,.main div:last-child input{
+    textarea,.private_main div:last-child input{
         width: 90%;
     }
-    .main div:last-child input{
+    .private_main div:last-child input{
         font-size: 14px;
     }
     .child{

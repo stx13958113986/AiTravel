@@ -61,12 +61,7 @@ body{
     top: 53%;
     left: 27%;
 }
-.footer-bottom{
-    
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
+
 
 @media screen and (max-width:996px) {
     .sel_bav{

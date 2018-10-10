@@ -2,44 +2,6 @@ const express = require("express");
 const router = express.Router();
 const pool = require("../pool");
 
-
-router.post("/signin",(req,res)=>{
-  var {uname,upwd}=req.body;
-  console.log(uname);
-  console.log(upwd);
-  var sql="select * from user where uname=? and upwd=?";
-  pool.query(sql,[uname,upwd],(err,result)=>{
-    if(err) console.log(err);
-    res.writeHead(200,{
-      "Content-Type":"application/json;charset=utf-8"
-    });
-    if(result.length>0){
-      req.session.uid=result[0].uid;
-      res.write(JSON.stringify({ok:1}))
-    }else
-      res.write(JSON.stringify({
-        ok:0, msg:"用户名或密码错误"
-      }))
-    res.end();
-  })
-})
-router.get("/islogin",(req,res)=>{
-  if(req.session.uid!==undefined){
-    var uid=req.session.uid;
-    var sql="select * from user where uid=?";
-    pool.query(sql,[uid],(err,result)=>{
-      if(err) console.log(err);
-      res.send({ok:1,uname:result[0].uname})
-    })
-  }else{
-    res.send({ok:0})
-  }
-})
-router.get("/signout",(req,res)=>{
- req.session.uid=undefined;
- res.send();
-})
-
 router.post("/check", (req, res) => {
   var uname = req.body.uname;
   var upwd = req.body.upwd;
@@ -67,7 +29,44 @@ router.post("/check", (req, res) => {
     var sql = 'INSERT INTO user VALUES(NULL,?,?,NULL,NULL,NULL,NULL)';
     pool.query(sql, [uname, upwd], (err, result) => {
       if (err) throw err;
-      res.send(`<script>location.href='http://localhost:3000/user_login.html?'</script>`);
+      res.send(`<script>location.href='http://127.0.0.1:3001/user_login'</script>`);
     });
+  })
+
+  router.post("/signin",(req,res)=>{
+    var {uname,upwd}=req.body;
+    var sql="select * from user where uname=? and upwd=?";
+    pool.query(sql,[uname,upwd],(err,result)=>{
+      if(err) console.log(err);
+      res.writeHead(200,{
+        "Content-Type":"application/json;charset=utf-8"
+      });
+      if(result.length>0){
+        req.session.uid=result[0].uid;
+        console.log("发送"+req.session.uid);
+        res.write(JSON.stringify({ok:1}))
+      }else
+        res.write(JSON.stringify({
+          ok:0, msg:"用户名或密码错误"
+        }))
+      res.end();
+    })
+  })
+  router.get("/islogin",(req,res)=>{
+    console.log("接受"+req.session.uid);
+    if(req.session.uid!==undefined){
+      var uid=req.session.uid;
+      var sql="select * from user where uid=?";
+      pool.query(sql,[uid],(err,result)=>{
+        if(err) console.log(err);
+        res.send({ok:1,uname:result[0].uname})
+      })
+    }else{
+      res.send({ok:0})
+    }
+  })
+  router.get("/signout",(req,res)=>{
+   req.session.uid=undefined;
+   res.send();
   })
 module.exports = router;

@@ -34,15 +34,15 @@ a:hover {
 }
 
 .banner-cloudapp {
-    background: url("../images/about_us/1.jpg") center center no-repeat;
+    background: url("../../../public/images/about_us/1.jpg") center center no-repeat;
 }
 
 .banner-cps {
-    background: url("../images/about_us/2.jpg") center center no-repeat;
+    background: url("../../../public/images/about_us/2.jpg") center center no-repeat;
 }
 
 .banner-trust {
-    background: url("../images/about_us/3.jpg") center center no-repeat;
+    background: url("../../../public/images/about_us/3.jpg") center center no-repeat;
 }
 
 .banner-engine {
@@ -163,11 +163,11 @@ a:hover {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background: url("../images/about_us/pagination_02.png") no-repeat
+    background: url("../../../public/images/about_us/pagination_02.png") no-repeat
 }
 
 .banner-area li.active {
-    background: url("../images/about_us/pagination_01.png") no-repeat
+    background: url("../../../public/images/about_us/pagination_01.png") no-repeat
 }
 
 .main {
@@ -186,10 +186,10 @@ html {
     padding-top: 50px;
     width: 100%;
     padding-bottom: 50px;
-    background: -webkit-linear-gradient(bottom, #aec0df, #97ccdb);
-    background: -o-linear-gradient(left, #aec0df, #97ccdb);
-    background: -moz-linear-gradient(left, #aec0df, #97ccdb);
-    background: linear-gradient(left, #aec0df, #97ccdb);
+    background: -webkit-linear-gradient(to bottom, #aec0df, #97ccdb);
+    background: -o-linear-gradient(to left, #aec0df, #97ccdb);
+    background: -moz-linear-gradient(to left, #aec0df, #97ccdb);
+    background: linear-gradient(to left, #aec0df, #97ccdb);
     opacity: 0.9;
 }
 
@@ -247,23 +247,12 @@ html {
     display: flex;
     padding-bottom: 30px;
 }
-
-.footer-right-item>div>p {
-    line-height: 49px;
-}
-
-.r1 {
+.r_1 {
     width: 33px;
     height: 45px;
 }
 
-.r2 {
+.r_2 {
     width: 35px;
     height: 35px;
-}
-
-.footer-bottom {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }

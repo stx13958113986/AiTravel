@@ -1,19 +1,18 @@
-.top {
+.top-details {
     position: relative;
     width: 100%;
 }
 
-.top img {
+.top-details img {
     width: 100%;
 }
-
-.big-main {
+.big-main-detail {
     margin-top: 100px;
     border-top: solid 1px rgb(179, 176, 170);
     width: 100%;
 }
 
-.main {
+.main-detail{
     width: 70%;
     margin: 0 auto;
     position: relative;
@@ -28,12 +27,12 @@
     color: blue !important;
 }
 
-.main>div>img {
+.main-detail>div>img {
     width: 80%;
     height: 640px;
 }
 
-.main>div ul {
+.main-detail>div ul {
     width: 20%;
     height: 640px;
     list-style: none;
@@ -43,24 +42,24 @@
     left: 83%;
 }
 
-.main>div ul li {
+.main-detail>div ul li {
     height: 170px;
 }
 
-.right {
+.right-detail {
     width: 90%;
     margin-left: 5%;
     margin-top: 60px;
     position: relative;
 }
 
-.right>p:first-child {
+.right-detail>p:first-child {
     font-size: 26px;
     width: 90%;
     color: black;
 }
 
-.right>img {
+.right-detail>img {
     width: 5%;
     position: absolute;
     right: 2%;
@@ -68,44 +67,44 @@
     cursor: pointer;
 }
 
-.right>p:nth-child(3) {
+.right-detail>p:nth-child(3) {
     padding-top: 20px;
     color: #B5B5B5;
     text-align: justify;
 }
 
-.right>p:nth-child(4) {
+.right-detail>p:nth-child(4) {
     padding-top: 20px;
     font-size: 16px;
 }
 
-.right>p:nth-child(4)>span:first-child {
+.right-detail>p:nth-child(4)>span:first-child {
     font-size: 24px;
     color: red;
     font-weight: bold;
     padding: 10px;
 }
 
-.right>p:nth-child(5) {
+.right-detail>p:nth-child(5) {
     font-size: 16px;
     padding-bottom: 10px;
 }
 
-.right>p:nth-child(5)>a {
+.right-detail>p:nth-child(5)>a {
     font-size: 14px;
     padding: 10px;
 }
 
-.right>p:nth-child(5)>a>img {
+.right-detail>p:nth-child(5)>a>img {
     padding: 10px;
 }
 
-.right>p:nth-child(6) {
+.right-detail>p:nth-child(6) {
     font-size: 16px;
     padding-bottom: 10px;
 }
 
-.right>p:nth-child(6)>span:first-child {
+.right-detail>p:nth-child(6)>span:first-child {
     font-size: 14px;
     background-color: #E36844;
     color: white;
@@ -113,40 +112,40 @@
     margin-left: 10px;
 }
 
-.right>p:nth-child(6)>span:nth-child(2) {
+.right-detail>p:nth-child(6)>span:nth-child(2) {
     font-size: 14px;
     color: #E36844;
     padding-left: 15px;
 }
 
-.right>p:nth-child(7) {
+.right-detail>p:nth-child(7) {
     padding-bottom: 10px;
 }
 
-.right>p:nth-child(7)>span:nth-child(1) {
+.right-detail>p:nth-child(7)>span:nth-child(1) {
     font-size: 14px;
     color: #E36844;
     padding-left: 15px;
 }
 
-.right>p:nth-child(8)>span:nth-child(1) {
+.right-detail>p:nth-child(8)>span:nth-child(1) {
     font-size: 14px;
     color: #E36844;
     padding-left: 15px;
 }
 
-.right>p:nth-child(9),
-.right>p:nth-child(10)>span:nth-child(1) {
+.right-detail>p:nth-child(9),
+.right-detail>p:nth-child(10)>span:nth-child(1) {
     font-size: 14px;
     color: #E36844;
     padding-left: 45px;
 }
 
-.right>p:nth-child(10) {
+.right-detail>p:nth-child(10) {
     padding-bottom: 10px;
 }
 
-.right>button {
+.right-detail>button {
     background-color: rgb(104, 104, 231);
     color: white;
     padding: 15px 25px 15px 25px;
@@ -162,7 +161,7 @@
     -o-border-radius: 10px;
 }
 
-.main>p {
+.main-detail>p {
     padding-top: 50px;
     font-size: 30px;
     color: rgb(141, 145, 142);
@@ -271,6 +270,7 @@
 }
 
 .comment>textarea {
+    border: 1px solid black;
     padding-top: 30px;
     width: 100%;
     border-radius: 10px;
@@ -279,7 +279,16 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-
+.detail-comment:focus{
+    border: 1px solid rgb(191, 192, 230) !important;
+    padding-top: 30px;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 .comment>button {
     display: block;
     color: white;
@@ -325,19 +334,19 @@ ul{
     border-bottom: 1px solid #A2A2A2;
 }
 @media screen and (min-width:1430px) and (max-width:1590px) {
-    .main {
+    .main-detail {
         width: 80%;
     }
 }
 
 @media screen and (min-width:1231px) and (max-width:1429px) {
-    .main {
+    .main-detail {
         width: 90%;
     }
 }
 
 @media screen and (min-width:1200px) and (max-width:1230px) {
-    .main {
+    .main-detail {
         width: 95%;
     }
 }
@@ -364,5 +373,14 @@ ul{
     }
     .detail_intr {
         width: 70%;
+    }
+    .top-details {
+        position: relative;
+        margin-top: 50px;
+    }
+    .big-main-detail {
+        margin-top: 50px;
+        border-top: solid 1px rgb(179, 176, 170);
+        width: 100%;
     }
 }
