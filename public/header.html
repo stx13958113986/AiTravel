@@ -1,0 +1,82 @@
+<header id="header">
+<nav v-if="!islogin" class="navbar navbar-default navbar-fixed-top noBorder" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand brandStyle" href="#">AI Travel</a>
+		</div>
+
+		<div class="collapse navbar-collapse noPadding" id="myNavbar">
+			<div class="navbar-right menustyle">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">
+							<p>网站首页</p>
+						</a></li>
+					<li><a href="selection.html">
+							<p>甄选旅程</p>
+						</a></li>
+					<li><a href="private.html">
+							<p>私人订制</p>
+						</a></li>
+					<li><a href="about_us.html">
+							<p>关于我们</p>
+						</a></li>
+					<li><a href="user_reg.html">
+							<p>注册</p>
+						</a></li>
+					<li><a href="user_login.html">
+							<p>登录</p>
+						</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</nav>
+ <nav v-else="" class="navbar navbar-default navbar-fixed-top noBorder" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand brandStyle" href="#">AI Travel</a>
+		</div>
+
+		<div class="collapse navbar-collapse noPadding" id="myNavbar">
+			<div class="navbar-right menustyle">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">
+							<p>网站首页</p>
+						</a></li>
+					<li><a href="selection.html">
+							<p>甄选旅程</p>
+						</a></li>
+					<li><a href="private.html">
+							<p>私人订制</p>
+						</a></li>
+					<li><a href="about_us.html">
+							<p>关于我们</p>
+						</a></li>
+					<li><a href="javascript:;" @click="update(uid)">
+							<p><span style="color:rgb(148, 147, 223)" v-text="uname"></span></p>
+						</a></li>
+					<li><a href="#">
+							<p href="javascript:;" @click="signout()">退出</p>
+						</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</nav> 
+</header>
