@@ -39,12 +39,12 @@ $("#reg").click(function () {
             $(".check").html("账号不能为空");
             
         } else if (result == "-3") {
-            $(".check").removeClass("ok");
+          //  $(".check").removeClass("ok");
             $(".check_pwd").addClass("err");
             $(".check_pwd").html("密码不能为空");
            
         }else if (result == "-4") {
-            $(".check").removeClass("ok");
+           // $(".check").removeClass("ok");
             $(".check_pwd").addClass("err");
             $(".check_pwd").html("密码不相同");
            

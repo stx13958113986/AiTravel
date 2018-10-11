@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" href="css/details.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.classyloupe.min.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/vue.js"></script>
@@ -24,29 +24,26 @@
     <div class="top">
         <img src="./images/details/selection.jpg" alt="">
     </div>
-    <div class="big-main">
+    <div class="big-main" id="main">
         <div class="row main fieldset">
             <div class="col-lg-6 col-md-12 fieldset">
                 <p class="position">
                     您现在所在的位置><a href="index.html">首页</a>><a href="selection.html">甄选旅程</a> ><a href="details.html">澳洲游</a>
                 </p>
-                <img src="./images/details/2-md.jpg" alt="">
-                <ul>
-                    <li><img src="./images/details/2-sm.jpg"></li>
-                    <li><img src="./images/details/1-sm.jpg"></li>
-                    <li><img src="./images/details/3-sm.jpg"></li>
-                    <li><img src="./images/details/4-sm.jpg"></li>
+                <img :src="pics[1].md" id="loupe1" class="demo-img pos-center">
+                <ul id="smImg">
+                    <li><img :src="pics[0].sm" :data-lg="pics[0].md"></li>
+                    <li><img :src="pics[1].sm" :data-lg="pics[1].md"></li>
+                    <li><img :src="pics[2].sm" :data-lg="pics[2].md"></li>
+                    <li><img :src="pics[3].sm" :data-lg="pics[3].md"></li>
                 </ul>
             </div>
             <div class="col-lg-6 col-md-12">
                 <div class="right">
-                    <p>新西兰南岛+库克群岛的浪漫时光15日</p>
+                    <p>{{list.title}}</p>
                     <img src="./images/details/ai-1.png" alt="">
-                    <p>关西地区的秋天大概是世界上最具韵味雅致的 保留着传统风情的京都每一处都是风景 真正深入京都认真感受这座传统古都的美丽 着和服寻觅幽静隐匿的京都寺院、品茶、静坐、赏枫
-                        寻访最地道的京都体验，品尝精致用心的顶级日式料理 京都中心袛园观赏日本7大传统艺术表演 漫步秋天里的奈良公园，与萌萌哒小鹿亲密互动 潺潺的流水、池塘和小溪在阳光下跳跃
-                        带着虔诚的心前往探访与世隔绝的佛教秘境—高野山 洗尽浮华，体验质朴的宿坊、素食料理、抄经、静坐、冥思 踏上日本心灵的圣地熊野古道的圣境修行之路 用双脚丈量信仰的长度
-                        除此之外，赏枫之余晚上在最具特色的日式旅馆舒服的泡汤 将所有的烦恼丝和疲惫都洗去 旅行中最惬意的事莫过于此</p>
-                    <p>活动价<span>￥36666</span><s>￥46666</s></p>
+                    <p>{{list.subtitle}}</p>
+                    <p>活动价<span>￥{{list.new_price}}</span><s>￥{{list.old_price}}</s></p>
                     <p>客服 <a href="#"> 联系客服<img src="./images/details/kefuf.gif" alt=""></p></a>
                     <p>促销<span>加人购</span><span>多加一人立减2000元,上不封顶!!!</span></p>
                     <p>积分<span>买的越多,积分越多!所赠服务越多!!</span> </p>
@@ -149,8 +146,23 @@
 
         </div>
     </div>
-    <script src="js/details.js"></script>
+    <script src="js/details_comment.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/details.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.easing.1.2.js"></script>
+    <script src="js/jquery.classyloupe.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#loupe1').ClassyLoupe({
+                maxSize: 600,
+                size: 160,
+                loupeToggleSpeed: 'fast',
+                canZoom: true,
+                zoom:150
+            });
+        });
+    </script>
 </body>
 
 </html>

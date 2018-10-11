@@ -29,7 +29,7 @@ router.post("/check", (req, res) => {
     var sql = 'INSERT INTO user VALUES(NULL,?,?,NULL,NULL,NULL,NULL)';
     pool.query(sql, [uname, upwd], (err, result) => {
       if (err) throw err;
-      res.send(`<script>location.href='http://127.0.0.1:3001/user_login'</script>`);
+      res.send(`<script>location.href='http://localhost:3000/user_login.html'</script>`);
     });
   })
 
@@ -43,7 +43,6 @@ router.post("/check", (req, res) => {
       });
       if(result.length>0){
         req.session.uid=result[0].uid;
-        console.log("发送"+req.session.uid);
         res.write(JSON.stringify({ok:1}))
       }else
         res.write(JSON.stringify({
@@ -53,7 +52,6 @@ router.post("/check", (req, res) => {
     })
   })
   router.get("/islogin",(req,res)=>{
-    console.log("接受"+req.session.uid);
     if(req.session.uid!==undefined){
       var uid=req.session.uid;
       var sql="select * from user where uid=?";

@@ -8,7 +8,7 @@ const index=require("./routes/index");
 const details=require("./routes/details");
 const products=require("./routes/products");
 const users=require("./routes/users");
-
+const private=require("./routes/private");
 
 var app = express();
 app.use(cors({
@@ -32,6 +32,7 @@ app.use("/index",index);
 app.use("/details",details);
 app.use("/products",products);
 app.use("/users",users);
+app.use("/private",private);
 
                //.get("/")
 //http://localhost:3000/index/

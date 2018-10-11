@@ -26,49 +26,51 @@
         <img src="./images/privated/1.jpg" alt="">
     </div>
     <div class="main">
+    <form id="private" action="/private/go" method="post">
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p>您的姓名</p>
-            <input type="text">
+            <input type="text" name="name">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p> 预计人数</p>
-            <input type="text">
+            <input type="text" name="count">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p>联系方式</p>
-            <input type="text">
+            <input type="text" name="phone">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p>每人预算</p>
-            <input type="text">
+            <input type="text" name="money">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p> 电子邮箱</p>
-            <input type="text">
+            <input type="text" name="email">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p>出行时间</p>
-            <input type="text">
+            <input type="text" name="data">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p>目的地</p>
-            <input type="text">
+            <input type="text" name="destination">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p>出行天数</p>
-            <input type="text">
+            <input type="text" name="day">
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 child">
             <p>特别备注</p>
-            <input type="text">
+            <input type="text" name="remarks">
         </div>
         <div class="col-sm-12 child">
                 <p>留言内容</p>
-                <textarea name="" id="" cols="" rows="5"></textarea>
+                <textarea name="message" id="" cols="" rows="5"></textarea>
         </div>
         <div class="col-sm-12 child">
             <input type="submit" value="立即定制">
         </div>
+    </form>
     </div>
 
     <div class="footer-bottom">
