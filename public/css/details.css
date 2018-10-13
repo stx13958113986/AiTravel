@@ -1,3 +1,6 @@
+body {
+    position: relative;
+}
 .top {
     position: relative;
     width: 100%;
@@ -176,6 +179,7 @@
 }
 
 .hot {
+    display: block;
     width: 23%;
     position: relative;
     padding-bottom: 30px;
@@ -313,16 +317,49 @@ ul{
     left: 150px;
     line-height: 40px;
 }
-.info>ul>li{
+.info>li{
     text-align: justify;
-    line-height: 40px;
+    line-height: 100px;
 }
-.info>li:nth-child(3){
+.info>li:nth-child(2){
     color: #A2A2A2;
 }
 .commit>li{
     padding-bottom: 50px;
     border-bottom: 1px solid #A2A2A2;
+}
+.commit{
+    position: relative;
+}
+.uname{
+    position: absolute;
+    left: 0px;
+    top: 140px;
+}
+.uname>span{
+    padding-left: 30px;
+    font-size: 16px;
+}
+.fenye li{
+    float: left;
+    border: 1px solid #BFCAD9;
+    padding: 8px;
+    margin: 0 7px;
+    color:#0AA1ED;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.pno_active{
+background-color: #0AA1ED;
+color: white !important;
+}
+.page{
+    color: #BFCAD9 !important;
 }
 @media screen and (min-width:1430px) and (max-width:1590px) {
     .main {

@@ -9,7 +9,7 @@ const details=require("./routes/details");
 const products=require("./routes/products");
 const users=require("./routes/users");
 const private=require("./routes/private");
-
+const comment=require("./routes/comment");
 var app = express();
 app.use(cors({
     origin:["http://127.0.0.1:3001"],
@@ -33,7 +33,7 @@ app.use("/details",details);
 app.use("/products",products);
 app.use("/users",users);
 app.use("/private",private);
-
+app.use("/comment",comment);
                //.get("/")
 //http://localhost:3000/index/
 

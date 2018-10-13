@@ -9,7 +9,7 @@ router.get("/search",(req,res)=>{
         pics:[]
     };
     (async function (){
-        var sql = " select title,subtitle,new_price,old_price from product where lid=?";
+        var sql = " select title,subtitle,new_price,old_price from product where product_id=?";
       await new Promise(function(open){
         pool.query(sql,[lid],(err,result)=>{
             if(err)

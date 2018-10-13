@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="css/header.css" />
     <link rel="stylesheet" type="text/css" href="css/base.css" />
     <link rel="stylesheet" href="css/details.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.classyloupe.min.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/vue.js"></script>
@@ -30,7 +29,7 @@
                 <p class="position">
                     您现在所在的位置><a href="index.html">首页</a>><a href="selection.html">甄选旅程</a> ><a href="details.html">澳洲游</a>
                 </p>
-                <img :src="pics[1].md" id="loupe1" class="demo-img pos-center">
+                <img :src="pics[1].md" id="example" class="demo-img pos-center">
                 <ul id="smImg">
                     <li><img :src="pics[0].sm" :data-lg="pics[0].md"></li>
                     <li><img :src="pics[1].sm" :data-lg="pics[1].md"></li>
@@ -41,7 +40,7 @@
             <div class="col-lg-6 col-md-12">
                 <div class="right">
                     <p>{{list.title}}</p>
-                    <img src="./images/details/ai-1.png" alt="">
+                    <img src="./images/details/ai-1.png" width="50" id="ai">
                     <p>{{list.subtitle}}</p>
                     <p>活动价<span>￥{{list.new_price}}</span><s>￥{{list.old_price}}</s></p>
                     <p>客服 <a href="#"> 联系客服<img src="./images/details/kefuf.gif" alt=""></p></a>
@@ -60,26 +59,26 @@
         <div class="main">
             <p>热门推荐</p>
             <div class="intr">
-                <div class="hot">
+                <a class="hot" href="details.html?lid=1">
                     <img src="./images/details/m1.jpg" alt="">
                     <p class="p1">周边游</p>
                     <p class="p2">DOMESTIC TRAVEL</p>
-                </div>
-                <div class="hot">
+                </a>
+                <a class="hot" href="details.html?lid=2">
                     <img src="./images/details/m2.jpg" alt="">
                     <p class="p1">中东游</p>
                     <p class="p2">DOMESTIC TRAVEL</p>
-                </div>
-                <div class="hot">
+                </a>
+                <a class="hot" href="details.html?lid=1">
                     <img src="./images/details/m5.jpg" alt="">
                     <p class="p1">美洲游</p>
                     <p class="p2">DOMESTIC TRAVEL</p>
-                </div>
-                <div class="hot">
+                </a>
+                <a class="hot" href="details.html?lid=2">
                     <img src="./images/details/m4.jpg" alt="">
                     <p class="p1">欧洲游</p>
                     <p class="p2">DOMESTIC TRAVEL</p>
-                </div>
+                </a>
 
             </div>
         </div>
@@ -113,56 +112,37 @@
                 <img src="./images/details/i2.jpg" alt="">
                 <img src="./images/details/i3.jpg" alt="">
             </div>
-            <div class="comment active">
+            <div class="comment active"  id="comment">
                 <p>我要评论</p>
-                <textarea name="" id="" cols="10" rows="4"></textarea>
-                <button>发布</button>
-                <ul class="commit">
+                <textarea placeholder="请输入评论内容(最多不超过120字)" maxlength="120" v-model="msg"></textarea>
+                <button @click="postComment">发布</button>
+                <ul class="commit" v-for="(item,i) in list" :key="item.id">
                     <li>
                         <div class="avator">
                             <img src="./images/details/avatar.jpg" alt="">
+                          
                             <ul class="info">
-                                <li>萧炎</li>
-                                <li>这个地方也太秀了吧</li>
-                                <li>2018-9-25 10:23</li>
+                                <li>{{item.content}}</li>
+                                <li>{{item.ctime|dateFormat}}</li>
                             </ul>
                         </div>
-                        
-                    </li>
-                    <li>
-                        <div class="avator">
-                            <img src="./images/details/avatar.jpg" alt="">
-                            <ul class="info">
-                                <li>萧炎</li>
-                                <li>这个地方也太秀了吧</li>
-                                <li>2018-9-25 10:23</li>
-                            </ul>
-                        </div>
-                    </li>
-                    
+                        <div class="uname">{{i+1}}楼<span>{{item.uname}}</span> </div> 
+                    </li>         
+                </ul>
+                <ul class="fenye">
+                <a href="javascript:;" @click="prev"><li :class="pre">上一页</li></a>
+                <div class="page"  v-for="(item,i) in pageCount" :key="item.id">
+               <a class="page-link" href="javascript:;" @click="go(i)"> <li :class="i==pageIndex?pa:''">{{i+1}}</li></a>
+                </div>
+               <a  href="javascript:;" @click="next"> <li :class="nex">下一页</li></a>
                 </ul>
             </div>
-
-
         </div>
     </div>
     <script src="js/details_comment.js"></script>
     <script src="js/header.js"></script>
     <script src="js/details.js"></script>
-	<script src="js/jquery.mousewheel.js"></script>
-    <script src="js/jquery.easing.1.2.js"></script>
-    <script src="js/jquery.classyloupe.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('#loupe1').ClassyLoupe({
-                maxSize: 600,
-                size: 160,
-                loupeToggleSpeed: 'fast',
-                canZoom: true,
-                zoom:150
-            });
-        });
-    </script>
+    <script src="js/comment.js"></script>
 </body>
 
 </html>
