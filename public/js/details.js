@@ -28,6 +28,19 @@ new Vue({
           this.list= result.body.product;
          
         });
+      },
+      buy(){
+        var url = "details/buy?lid=" + this.lid;
+        this.$http.get(url).then(result => {
+               console.log(result);  
+               if(result.data.ok == 1){
+                 alert("添加成功");
+               }else if(result.data.ok == -1){
+                alert("你已经添加到订单");
+               }else{
+                 alert("请先登录!")
+               }
+        });
       }
     }
   })

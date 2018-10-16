@@ -34,6 +34,9 @@ $(function(){
                       },
                     update(uid){
                         location.href="http://localhost:3000/update.html?uid=" + uid;
+                      },
+                      buy(uid){
+                        location.href="http://localhost:3000/buy.html?uid=" + uid;
                       }
                 }
             })
