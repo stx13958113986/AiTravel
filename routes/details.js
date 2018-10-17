@@ -27,8 +27,9 @@ router.get("/search", (req, res) => {
                 open();
             })
         })
-        res.write(JSON.stringify(obj));
-        res.end();
+        // res.write(JSON.stringify(obj));
+        // res.end();
+        res.send(obj);
     })();
 })
 router.get("/buy", (req, res) => {
@@ -100,8 +101,9 @@ router.get("/content", (req, res) => {
             })
         }
         console.log(obj.product);
-        res.write(JSON.stringify(obj));
-        res.end();
+       // res.write(JSON.stringify(obj));
+        //res.end();
+        res.send(obj)
     })();
 })
 

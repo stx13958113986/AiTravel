@@ -62,12 +62,12 @@ textarea{
 }
 @media screen and (max-width:992px) {
     textarea,.main div:last-child input{
-        width: 90%;
+        width: 90% !important;
     }
     .main div:last-child input{
         font-size: 14px;
     }
     .child{
-        width: 100%;
+        width: 100% !important;
     }
 }

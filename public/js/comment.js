@@ -1,6 +1,7 @@
 Vue.filter("dateFormat", function (datestr, pattern = "YYYY-MM-DD") {
     return new Date(datestr).toLocaleString();
-});
+}
+);
 new Vue({
     el: "#comment",
     data() {
