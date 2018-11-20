@@ -2,17 +2,7 @@ const path=require("path");
 const uglify=require("uglifyjs-webpack-plugin");
 module.exports={
     entry:{
-        about_us:'./public/js/about_us.js',
-        buy:'./public/js/buy.js',
         comment:'./public/js/comment.js',
-        details_comment:'./public/js/details_comment.js',
-        details:'./public/js/details.js',
-        header:'./public/js/header.js',
-        index:'./public/js/index.js',
-        title:'./public/js/title.js',
-        update:'./public/js/update.js',
-        user_login:'./public/js/user_login.js',
-        user_reg:'./public/js/user_reg.js',
     },
     output:{
         path:path.resolve(__dirname,'dist'),

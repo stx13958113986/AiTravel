@@ -1,1 +1,110 @@
-!function(e){var t={};function n(o){if(t[o])return t[o].exports;var i=t[o]={i:o,l:!1,exports:{}};return e[o].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=e,n.c=t,n.d=function(e,t,o){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:o})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var o=Object.create(null);if(n.r(o),Object.defineProperty(o,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)n.d(o,i,function(t){return e[t]}.bind(null,i));return o},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=8)}({8:function(e,t){Vue.filter("dateFormat",function(e,t="YYYY-MM-DD"){return new Date(e).toLocaleString()}),new Vue({el:"#comment",data:()=>({lid:location.search.split("=")[1],uname:"",list:[],msg:"",pageIndex:0,pageCount:"",pre:{page:!0},nex:{page:!1},pa:"pno_active"}),components:{},created(){this.getcontent(),this.getComment()},methods:{getcontent(){this.$http.get("users/islogin").then(e=>{1==e.data.ok&&(this.uname=e.data.uname)})},postComment(){var e={lid:this.lid,content:this.msg,uname:this.uname};this.$http.post("comment/saveComment",e,{emulateJSON:!0}).then(e=>{1==e.data.code?window.history.go(0):alert("你还未登录")})},getComment(){var e="comment/getComment?lid="+this.lid;e+="&pno="+this.pageIndex,this.$http.get(e).then(e=>{this.list=e.body.products,this.pageCount=e.body.pageCount})},go(e){this.pageIndex=e,console.log("pageIndex="+pageIndex),this.getComment()},next(){this.pageIndex<this.pageCount-1&&(this.pageIndex++,this.pre.page=!1,this.getComment()),this.pageIndex==this.pageCount-1&&(this.nex.page=!0)},prev(){this.pageIndex>=1&&(this.pageIndex--,this.getComment()),0==this.pageIndex&&(this.pre.page=!0),this.pageIndex<this.pageCount-1&&(this.nex.page=!1)}}})}});
+
+Vue.filter("dateFormat", function (datestr, pattern = "YYYY-MM-DD") {
+    return new Date(datestr).toLocaleString();
+}
+);
+new Vue({
+    el: "#comment",
+    data() {
+        return {
+            lid: location.search.split("=")[1],
+            uname: "",
+            list: [],
+            msg: "",
+            pageIndex: 0, //当前显示的页码
+            pageCount: "",
+            pre: {
+                page: true
+            },
+            nex: {
+                page: false
+            },
+            pa:'pno_active',  
+        };
+    },
+    components: {},
+    created() {
+        this.getcontent();
+        this.getComment();
+    },
+    methods: {
+        getcontent() {
+
+            var url = "users/islogin"
+            this.$http.get(url).then(result => {
+                if (result.data.ok == 1) {
+                    this.uname = result.data.uname;
+                } else {
+
+                }
+            });
+        },
+        postComment() {
+            var lid = this.lid;
+            var content = this.msg;
+            var uname = this.uname
+            var url = "comment/saveComment";
+            var obj = {
+                lid: lid,
+                content: content,
+                uname: uname
+            };
+            this.$http.post(url, obj, {
+                emulateJSON: true
+            }).then(result => {
+                if (result.data.code == 1) {
+                    window.history.go(0);
+                } else {
+                    alert("你还未登录");
+                }
+            });
+        },
+        getComment() {
+            var url = "comment/getComment?lid=" + this.lid;
+            url += "&pno=" + this.pageIndex;
+            this.$http.get(url).then(result => {
+                this.list = result.body.products;
+                this.pageCount = result.body.pageCount;
+            });
+        },
+        go(i) {
+            this.pageIndex = i;
+            console.log("pageIndex="+this.pageIndex)   
+            console.log("pageCount="+this.pageCount)  
+            if (this.pageIndex==0) {
+                this.pre.page= true;
+            }else{
+                this.pre.page= false;
+            }
+            if (this.pageIndex == this.pageCount-1) {
+                this.nex.page=true;
+            }else{
+                this.nex.page=false;
+            }
+            this.getComment();
+        },
+        next() {
+            if (this.pageIndex < this.pageCount - 1) {
+                this.pageIndex++;
+                this.pre.page= false;
+                this.getComment();
+            }
+            if (this.pageIndex == this.pageCount-1) {
+                this.nex.page=true;
+            }
+        },
+        prev() {
+            if (this.pageIndex >= 1) {
+                this.pageIndex--;
+                this.getComment();
+            }
+            if (this.pageIndex == 0) {
+                this.pre.page = true;
+            } 
+            if (this.pageIndex < this.pageCount - 1) {
+                this.nex.page= false;
+            }
+        }
+
+    }
+})
