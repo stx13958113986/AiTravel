@@ -11,6 +11,7 @@ const users=require("./routes/users");
 const private=require("./routes/private");
 const comment=require("./routes/comment");
 var app = express();
+
 app.use(cors({
     origin:["http://127.0.0.1:3001"],
     credentials:true
